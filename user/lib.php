@@ -555,7 +555,13 @@ function user_get_user_details($user, $course = null, array $userfields = array(
         $extrafields = ['auth', 'confirmed', 'lang', 'theme', 'timezone', 'mailformat'];
         foreach ($extrafields as $extrafield) {
             if (in_array($extrafield, $userfields) && isset($user->$extrafield)) {
-                $userdetails[$extrafield] = $user->$extrafield;
+                if ($extrafield == 'timezone') {
+                    // Convert non-standard values with special meaning into valid
+                    // format (e.g. "99" into the server timezone).
+                    $userdetails[$extrafield] = core_date::get_user_timezone($user);
+                } else {
+                    $userdetails[$extrafield] = $user->$extrafield;
+                }
             }
         }
     }

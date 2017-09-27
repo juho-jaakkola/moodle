@@ -691,6 +691,7 @@ class core_enrol_external extends external_api {
                     'description' => new external_value(PARAM_RAW, 'User profile description', VALUE_OPTIONAL),
                     'descriptionformat' => new external_format_value('description', VALUE_OPTIONAL),
                     'city'        => new external_value(PARAM_NOTAGS, 'Home city of the user', VALUE_OPTIONAL),
+                    'timezone'    => new external_value(PARAM_NOTAGS, 'Timezone such as Europe/Helsinki', VALUE_OPTIONAL),
                     'url'         => new external_value(PARAM_URL, 'URL of the user', VALUE_OPTIONAL),
                     'country'     => new external_value(PARAM_ALPHA, 'Home country code of the user, such as AU or CZ', VALUE_OPTIONAL),
                     'profileimageurlsmall' => new external_value(PARAM_URL, 'User image profile URL - small version', VALUE_OPTIONAL),

@@ -1,4 +1,12 @@
 {
+    "name": "moodle/moodle",
+    "license": "GPL-3.0",
+    "description": "Moodle - the world's open source learning platform",
+    "type": "moodle-mod",
+    "homepage": "https://moodle.org",
+    "require": {
+        "composer/installers": "^1.2"
+    },
     "require-dev": {
         "phpunit/phpunit": "4.8.*",
         "phpunit/dbUnit": "1.4.*",
